@@ -7,7 +7,6 @@ def _clip_grad(unused_op, grad):
 
 
 with tf.Graph().as_default() as g:
-
     input = tf.Variable([3.0], dtype=tf.float32)
 
     with g.gradient_override_map({"Identity": "CustomClipGrad"}):
