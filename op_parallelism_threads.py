@@ -1,8 +1,8 @@
 import tensorflow as tf
 
-session_conf = tf.ConfigProto(intra_op_parallelism_threads=1, inter_op_parallelism_threads=1)
+config = tf.ConfigProto(intra_op_parallelism_threads=1, inter_op_parallelism_threads=1)
 
-with tf.Session() as sess:
+with tf.Session(config=config) as sess:
 
     x = tf.placeholder(tf.int32, shape=[4])
     y = tf.Print(x, [tf.shape(x)], message='tf.shape(x)=', summarize=4)
