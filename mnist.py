@@ -124,7 +124,7 @@ def train(config, data, output_dir):
                 tf.logging.info('{0:5d} -> accuracy(training)={1:.5f} lr={2:.5f}'.format(i, train_accuracy, lr.eval()))
             train_step.run(feed_dict={x: batch[0], y_: batch[1]})
 
-        tf.logging.info('accuracy(testing)={0.5f}'.format(accuracy.eval(feed_dict={x: data.test.images, y_: data.test.labels})))
+        tf.logging.info('accuracy(testing)={0:5f}'.format(accuracy.eval(feed_dict={x: data.test.images, y_: data.test.labels})))
 
         saver.save(sess, output_dir)
 
