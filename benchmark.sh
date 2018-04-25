@@ -8,5 +8,7 @@ pip install --upgrade tensorflow-gpu==1.5.0
 
 python models/tutorials/image/mnist/convolutional.py
 
-# QUADRO P5000     -> 5.0ms
-# Titan X (Pascal) -> 2.7ms
+# Titan X Pascal (local) -> 2.7ms
+# Quadro P5000 (Paperspace) -> 4.5ms
+# Quadro P6000 (Paperspace) -> 4.0ms
+# Tesla V100 (Paperspace)   -> ?
